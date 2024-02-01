@@ -25,7 +25,7 @@ def extract_and_decode_barcodes(pdf_file_name):
                 if obj.type == 'CODE39':
                     barcode_data = {
                         "File": pdf_file_name.replace('.pdf', ''),  # Remove ".pdf" from the file name
-                        "Data": obj.data.decode("utf-8")
+                        "Data": obj.data.decode("ISO-8859-1")
                     }
                     barcodes.append(barcode_data)
 
